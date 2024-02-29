@@ -1,0 +1,20 @@
+# source files in this project (main.cpp is automatically assumed)
+SOURCES := GameController.cpp GameView.cpp GameModel.cpp Command.cpp CommandHistory.cpp
+
+# header files in this project
+HEADERS := GameController.hpp GameView.hpp GameModel.hpp Command.hpp CommandHistory.hpp
+
+# other places to look for files for this project
+SEARCH  := 
+
+# set RELATIVE to the next higher directory 
+# and defer to the Makefile.due there
+RELATIVE := $(RELATIVE)../
+
+# compiler flags for the console version
+DEFINES := -D CONSOLE_VERSION
+
+# output executable for the console version
+TARGET := main_console.exe
+
+include $(RELATIVE)Makefile.native
